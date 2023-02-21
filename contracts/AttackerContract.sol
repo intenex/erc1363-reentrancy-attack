@@ -44,7 +44,6 @@ contract AttackerContract is IERC1363Receiver {
         );
         timesCalled += 1;
         if (timesCalled < 100) {
-            // 10 ether is equivalent to 10000000000000000000
             vulnerableContract.reentrancyAttackWithdrawTokens();
         }
         return
